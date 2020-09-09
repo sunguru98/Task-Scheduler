@@ -1,0 +1,37 @@
+.Task__container {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+
+  & button {
+    width: 20%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.Task {
+  border-radius: 0.5rem;
+  border: 3px solid #8f72b3;
+  overflow: hidden;
+  position: relative;
+
+  margin-right: 1rem;
+
+  &__progress {
+    height: 100%;
+    background: #8f72b3;
+    color: white;
+    transition: width 0.3s linear;
+
+    & span {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      transition: color 0.3s;
+    }
+  }
+}

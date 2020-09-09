@@ -55,9 +55,7 @@ const TaskQueue: React.FC = React.memo(() => {
   return (
     <div className="TaskQueue">
       {taskQueue.length ? (
-        taskQueue.map(task => (
-          <TaskComponent key={task.id} task={task} limit={5} />
-        ))
+        taskQueue.map(task => <TaskComponent key={task.id} task={task} />)
       ) : (
         <span>No tasks running at the moment.</span>
       )}
